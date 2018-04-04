@@ -3,11 +3,15 @@ import VueRouter from 'vue-router';
 import Routers from './router';
 
 import Util from './libs/util';
+import Api from './libs/api';
+
 import App from './app.vue';
 
 import './styles/reset.css';
 
 Vue.use(VueRouter);
+
+Vue.prototype.$api = Api;
 
 // 路由配置
 const RouterConfig = {

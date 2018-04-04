@@ -2,16 +2,24 @@
 </style>
 <template>
     <div class="index">
-       <h1 @click="doIt">Hello World</h1>
+        <h1 @click="doIt">Hello World</h1>
+        <div>{{res}}</div>
     </div>
 </template>
 <script>
-    export default {
-        methods: {
-            doIt() {
-                alert('Just Do It');
-                //this.$api.getInfo();
-            }
+export default {
+    data() {
+        return {
+            res: ''
         }
-    };
+    },
+    methods: {
+        doIt() {
+            this.$api.getIndex().then(res => {
+                this.res = res;
+            });
+            //alert('Just Do It');
+        }
+    }
+};
 </script>
