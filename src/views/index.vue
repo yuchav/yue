@@ -1,24 +1,40 @@
 <style scoped>
 </style>
 <template>
-    <div class="index">
-        <h1 @click="doIt">Hello World</h1>
-        <div>{{res}}</div>
+    <div class="index-page">
+        <h1>{{$router.history.current.meta.title}}</h1>
+        <div class="mb-10 mt-10">
+            <my-button @click.native="doIt">Do Me A Faver</my-button>
+            <my-button @click.native="goAbout">About</my-button>
+        </div>
+        <textarea rows="30" style="width:100%">{{res}}</textarea>
     </div>
 </template>
 <script>
+// import {
+//     Bar,Foo
+// } from 'SomeUi';
+
 export default {
+    components: {
+        'my-button': (resolve) => require(['../coms/button.vue'], resolve),
+        //Bar,
+        //Foo
+    },
     data() {
         return {
             res: ''
         }
     },
+    mounted(){},
     methods: {
         doIt() {
             this.$api.getIndex().then(res => {
                 this.res = res;
             });
-            //alert('Just Do It');
+        },
+        goAbout(){
+            this.$router.push('about')
         }
     }
 };
