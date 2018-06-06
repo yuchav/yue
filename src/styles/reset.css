@@ -1,9 +1,31 @@
-body{
-	max-width:350px;
-	margin:0 auto;
-	text-align: center;
+* {
+    margin: 0;
+    padding: 0;
 }
-.mt-10{margin-top:10px;}
-.mb-10{margin-bottom:10px;}
-.mb-20{margin-bottom:20px;}
 
+html,
+body,
+body>div,
+body>div>div {
+    height: 100%;
+}
+
+body>div>div {
+    overflow: auto;
+}
+
+body {
+    text-align: center;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}

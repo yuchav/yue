@@ -7,7 +7,7 @@
             <my-button @click.native="doIt">Do Me A Faver</my-button>
             <my-button @click.native="goAbout">About</my-button>
         </div>
-        <textarea rows="30" style="width:100%">{{res}}</textarea>
+        <textarea rows="30" style="width:95%">{{res}}</textarea>
     </div>
 </template>
 <script>
