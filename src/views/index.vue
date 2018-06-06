@@ -13,7 +13,7 @@
 <script>
 // import {
 //     Bar,Foo
-// } from 'SomeUi';
+// } from 'SomeUi'; 同步引用
 
 export default {
     components: {
